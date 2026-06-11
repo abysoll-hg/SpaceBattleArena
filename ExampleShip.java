@@ -32,6 +32,9 @@ public class ExampleShip extends BasicSpaceship {
         if (env.getShipStatus().getPosition().getDistanceTo(this.midpoint) < 275) {
             return new BrakeCommand(0.01);
         }
+        if (false) {
+            return new RadarCommand(2);
+        }
         else {
             if (f % 2 == 0) {
                 if (env.getShipStatus().getOrientation() > Math.abs(getAngleToMidpoint(env)-5) && env.getShipStatus().getOrientation() < Math.abs(getAngleToMidpoint(env)+5)) {
